@@ -21,7 +21,7 @@
         <div class="col-2"></div>
         <div class="row col-8">
             <post-component v-for="p in posts"
-                            v-bind:post1="p" />
+                            v-bind:post="p" />
         </div>
         <div class="col-2"></div>
     </div>
@@ -29,7 +29,7 @@
 
 <script>
     Vue.component('post-component', {
-        props: ['post1'],
+        props: ['post'],
         template: `
         <div class="post col-3">
             <img :src="post.src">
